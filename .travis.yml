@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.1
+script:
+  - bundle exec jekyll build
+  - npm install
+  - gulp lint
+branches:
+  only:
+  - /.*/
+cache: bundler
+notifications:
+  email: false
+sudo: false
